@@ -1,0 +1,110 @@
+/* #34DCAC
+#00BEAD
+#009FA4
+#008192
+#256478
+#2F4858 */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+textarea:focus, input:focus{
+    outline: none;
+    background-color:transparent;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+.nav-container{
+    position: absolute;
+    z-index: 2;
+}
+nav{
+    margin: 20px 20px;
+}
+nav a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav a p{
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+
+header{
+    position: relative;
+    z-index: 1;
+    /* top: 0;
+    left: 0;
+    right: 0; */
+    background-image: url("/img/susanne.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h2{
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 40px;
+    padding-bottom: 25px;
+}
+
+.search-form{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    position: relative;
+}
+
+.search-input{
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2F4858;
+    background-color: whitesmoke;
+ 
+}
+
+.submit-btn{
+    position: absolute;
+    top:0;
+    right: 0;
+    background: none;
+    border: none;
+    color: #00C6BF;
+    cursor: pointer;
+    padding: 12px 20px;
+
+}
+
+/* main{
+    
+}
+
+.nav-button{
+    
+} */
+
+
+/* @media */
+@media only screen and (max-width: 600px) {
+    .heared-content{
+        width: 85%;}
+  }
