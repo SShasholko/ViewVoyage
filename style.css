@@ -94,6 +94,16 @@ header h2{
 
 }
 
+.gallery-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: grey;
+}
+
+.gallery-info a{
+    color: grey;
+}
 /* main{
     
 }
