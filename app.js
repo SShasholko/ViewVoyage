@@ -2,10 +2,19 @@ const auth = 'nWyUn0h0FmnDePqoeO86Iheim92k4G4nLW1zyGYuxA9KUHQKMiSlTX6y'
 const gallery = document.querySelector('.gallery')
 const searchInput = document.querySelector('.search-input')
 const form = document.querySelector('.search-form')
+const bgImageForHeader = document.querySelector('header')
+console.log(bgImageForHeader)
 let searchValue;
 
 //Event listeners
 searchInput.addEventListener('input', apdateInput)
+
+
+function changeBgImageForHeader(){
+    const bgImage = ['/img/pexels1.jpg', '/img/pexels2.jpg', '/img/pexels3.jpg', '/img/pexels4.jpg', '/img/pexels5.jpg']
+    const index = Math.floor(Math.random() * bgImage.length)
+    bgImageForHeader.style.backgroundImage = `url(${bgImage[index]})`;
+}
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -57,4 +66,5 @@ function clear(){
     searchInput.value = ''
 }
 
+changeBgImageForHeader()
 curatedPhotos()
