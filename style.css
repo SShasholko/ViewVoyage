@@ -43,9 +43,6 @@ nav a p{
 header{
     position: relative;
     z-index: 1;
-    /* top: 0;
-    left: 0;
-    right: 0; */
     background-image: url("/img/susanne.jpg");
     background-size: cover;
     background-position: center;
@@ -99,22 +96,54 @@ header h2{
     justify-content: space-between;
     align-items: center;
     color: grey;
+    padding: 0.5rem 0rem;
 }
 
 .gallery-info a{
     color: grey;
 }
-/* main{
-    
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    padding: 2rem 0rem;
+    width: 80%;
+    margin: 0 auto;
+    row-gap: 5rem;
+    column-gap: 3rem;
+}
+
+.gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .nav-button{
-    
-} */
+    padding: 2rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.more{
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #2F4858;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
 
 
 /* @media */
 @media only screen and (max-width: 600px) {
     .heared-content{
         width: 85%;}
+
+    .gallery{
+        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+        width: 90%;
+    }
   }
