@@ -4,11 +4,15 @@ const searchInput = document.querySelector('.search-input')
 const form = document.querySelector('.search-form')
 const bgImageForHeader = document.querySelector('header')
 console.log(bgImageForHeader)
-let searchValue;
+let searchValue
+const more = document.querySelector('.more')
+let page = 1
+let fetchLink
+let currentSearch
 
 //Event listeners
 searchInput.addEventListener('input', apdateInput)
-
+more.addEventListener('click', morePhotos)
 
 function changeBgImageForHeader(){
     const bgImage = ['/img/pexels1.jpg', '/img/pexels2.jpg', '/img/pexels3.jpg', '/img/pexels4.jpg', '/img/pexels5.jpg']
@@ -18,6 +22,7 @@ function changeBgImageForHeader(){
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
+    currentSearch = searchValue
     searchPhotos(searchValue)
 })
 
@@ -39,13 +44,15 @@ async function fetchAPI(url){
 
 
 async function curatedPhotos(){
-    const data = await fetchAPI('https://api.pexels.com/v1/curated?per_page=15&page=1')
+    fetchLink = `https://api.pexels.com/v1/curated?per_page=15&page=1`
+    const data = await fetchAPI(fetchLink)
     generatePictures(data)
 }
 
 async function searchPhotos(query){
     clear()
-    const data = await fetchAPI(`https://api.pexels.com/v1/search?query=${query}&per_page=15&page=1`)
+    fetchLink = `https://api.pexels.com/v1/search?query=${query}&per_page=15&page=1`
+    const data = await fetchAPI(fetchLink)
     generatePictures(data)
 }
 
@@ -64,6 +71,18 @@ function generatePictures(data){
 function clear(){
     gallery.innerHTML = '';
     searchInput.value = ''
+}
+
+async function morePhotos(){
+    page++;
+    if(currentSearch){
+        fetchLink = `https://api.pexels.com/v1/search?query=${currentSearch}&per_page=15&page=${page}`    
+    }
+    else{
+        fetchLink = `https://api.pexels.com/v1/curated?per_page=15&page=${page}`
+    }
+    const data = await fetchAPI(fetchLink)
+    generatePictures(data)
 }
 
 changeBgImageForHeader()
