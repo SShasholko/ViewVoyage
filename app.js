@@ -2,8 +2,8 @@ const auth = 'nWyUn0h0FmnDePqoeO86Iheim92k4G4nLW1zyGYuxA9KUHQKMiSlTX6y'
 const gallery = document.querySelector('.gallery')
 const searchInput = document.querySelector('.search-input')
 const form = document.querySelector('.search-form')
-const bgImageForHeader = document.querySelector('header')
-console.log(bgImageForHeader)
+// const bgImageForHeader = document.querySelector('header')
+// console.log(bgImageForHeader)
 let searchValue
 const more = document.querySelector('.more')
 let page = 1
@@ -14,11 +14,77 @@ let currentSearch
 searchInput.addEventListener('input', apdateInput)
 more.addEventListener('click', morePhotos)
 
-function changeBgImageForHeader(){
-    const bgImage = ['/img/pexels1.jpg', '/img/pexels2.jpg', '/img/pexels3.jpg', '/img/pexels4.jpg', '/img/pexels5.jpg']
-    const index = Math.floor(Math.random() * bgImage.length)
-    bgImageForHeader.style.backgroundImage = `url(${bgImage[index]})`;
+
+
+
+
+
+let items = document.querySelectorAll('.slider .list .item');
+let prevBtn = document.getElementById('prev');
+let nextBtn = document.getElementById('next');
+let lastPosition = items.length - 1;
+let firstPosition = 0;
+let active = 0;
+
+nextBtn.onclick = () => {
+    active = active + 1;
+    setSlider();
 }
+prevBtn.onclick = () => {
+    active = active - 1;
+    setSlider();
+}
+const setSlider = () => {
+    let oldActive = document.querySelector('.slider .list .item.active');
+    if(oldActive) oldActive.classList.remove('active');
+    items[active].classList.add('active');
+    // 
+    nextBtn.classList.remove('d-none');
+    prevBtn.classList.remove('d-none');
+    if(active == lastPosition) nextBtn.classList.add('d-none');
+    if(active == firstPosition) prevBtn.classList.add('d-none');
+}
+setSlider();
+
+// set diameter
+const setDiameter = () => {
+    let slider = document.querySelector('.slider');
+    let widthSlider = slider.offsetWidth;
+    let heightSlider = slider.offsetHeight;
+    let diameter = Math.sqrt(Math.pow(widthSlider, 2) + Math.pow(heightSlider, 2));
+    document.documentElement.style.setProperty('--diameter', diameter+'px');
+}
+setDiameter();
+window.addEventListener('resize', () => {
+    setDiameter();
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function changeBgImageForHeader(){
+//     const bgImage = ['/img/pexels1.jpg', '/img/pexels2.jpg', '/img/pexels3.jpg', '/img/pexels4.jpg', '/img/pexels5.jpg']
+//     const index = Math.floor(Math.random() * bgImage.length)
+//     bgImageForHeader.style.backgroundImage = `url(${bgImage[index]})`;
+// }
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -85,5 +151,5 @@ async function morePhotos(){
     generatePictures(data)
 }
 
-changeBgImageForHeader()
+// changeBgImageForHeader()
 curatedPhotos()

@@ -1,44 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>ViewVoyage</title>
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+      rel="shortcut icon"
+      href="/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
 
-<body>
-    <div class="nav-container">
-        <nav>
-            <a href="index.html" id="logo"><img src="img/viewvoyage-logo.png" alt="logo-image"><p>ViewVoyage<p></a>
-        </nav>
-    </div>
+  <body>
     <header>
-        <div class="heared-content">
-        <h2>Your Visual Journey Begins Here.</h2>
-        <form class="search-form">
-            <input type="text" name="search" class="search-input">
-            <button type="submit" class="submit-btn"><i class="fas fa-search"></i></button>
-        </form>
-        </div>
+      <figure class="logo">
+        <a
+          href="index.html"
+          id="logo"
+          ><img
+            src="img/viewvoyage-logo.png"
+            alt="logo-image" />
+          <p>ViewVoyage</p>
+          <p></p
+        ></a>
+        <!-- <img src="img/viewvoyage-logo.png" alt=""> -->
+      </figure>
+      <nav>
+        <svg
+          class="w-6 h-6 text-gray-800 dark:text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="2"
+            d="M5 7h14M5 12h14M5 17h10"
+          />
+        </svg>
+      </nav>
     </header>
-    
-        <div class="gallery"></div>
-    
+    <section class="slider">
+      <div class="list">
+        <div class="item active">
+          <div
+            class="image"
+            style="--url: url('img/pexels1.jpg')"
+          ></div>
+          <div class="content">
+            <h2>Your Visual Journey Begins Here.</h2>
+          </div>
+        </div>
+        <div class="item">
+          <div
+            class="image"
+            style="--url: url('img/pexels2.jpg')"
+          ></div>
+          <div class="content">
+            <h2>Your Visual Journey Begins Here.</h2>
+          </div>
+        </div>
+        <div class="item">
+          <div
+            class="image"
+            style="--url: url('img/pexels3.jpg')"
+          ></div>
+          <div class="content">
+            <h2>Your Visual Journey Begins Here.</h2>
+          </div>
+        </div>
+        <div class="item">
+          <div
+            class="image"
+            style="--url: url('img/pexels4.jpg')"
+          ></div>
+          <div class="content">
+            <h2>Your Visual Journey Begins Here.</h2>
+          </div>
+        </div>
+        <div class="item">
+          <div
+            class="image"
+            style="--url: url('img/pexels5.jpg')"
+          ></div>
+          <div class="content">
+            <h2>Your Visual Journey Begins Here.</h2>
+          </div>
+        </div>
+      </div>
+      <div class="heared-content">
+        <form class="search-form">
+          <input
+            type="text"
+            name="search"
+            class="search-input"
+          />
+          <button
+            type="submit"
+            class="submit-btn"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+      <div class="arrows">
+        <button id="prev">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 12h14M5 12l4-4m-4 4 4 4"
+            />
+          </svg>
+        </button>
+        <button id="next">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 12H5m14 0-4 4m4-4-4-4"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
+    <section class="gallery"></section>
     <div class="nav-button">
-        <button class="more">More</button>
+      <button class="more">More</button>
     </div>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
