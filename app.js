@@ -22,6 +22,7 @@ window.addEventListener("resize", () => {
   setDiameter();
 });
 
+//Animation on first screen
 nextBtn.onclick = () => {
   active = active + 1;
   setSlider();
@@ -51,6 +52,7 @@ const setDiameter = () => {
   document.documentElement.style.setProperty("--diameter", diameter + "px");
 };
 
+//Gallery
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   currentSearch = searchValue;
@@ -83,7 +85,13 @@ async function searchPhotos(query) {
   clear();
   fetchLink = `https://api.pexels.com/v1/search?query=${query}&per_page=15&page=1`;
   const data = await fetchAPI(fetchLink);
-  generatePictures(data);
+  if(data.total_results){
+    generatePictures(data);}
+  else{
+    const galleryImg = document.createElement("div");
+    galleryImg.innerHTML = `<p>Nothing was found for your request</p>`
+    gallery.appendChild(galleryImg);
+  }
 }
 
 function generatePictures(data) {

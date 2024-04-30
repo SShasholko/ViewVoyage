@@ -1,10 +1,3 @@
-/* #34DCAC
-#00BEAD
-#009FA4
-#008192
-#256478
-#2F4858 */
-
 @import url("https://fonts.cdnfonts.com/css/bebas-neue");
 @import url("https://fonts.cdnfonts.com/css/poppins");
 
@@ -64,7 +57,6 @@ header {
 }
 .slider {
   color: #eee;
-  /* width: 100vw; */
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -86,11 +78,6 @@ header {
   width: max-content;
   max-width: 100%;
   text-align: center;
-  /* display: grid;
-    grid-template-columns: repeat(2, 400px);
-    text-align: left;
-    gap: 80px;
-    font-size: 1.2em; */
   text-transform: uppercase;
   font-family: Poppins;
   text-shadow: 0 0 80px #000;
@@ -101,18 +88,7 @@ header {
   line-height: 0.9em;
   transform: translateY(-100%);
   transition: transform 1s;
-  /* grid-row-start: 1;
-    grid-row-end: 3; */
 }
-/* .slider .list .item .content p{
-} */
-/* .slider .list .item .content p:last-child{
-    display: flex;
-    justify-content: start;
-    align-items: end;
-    padding-bottom: 25px;
-} */
-/* item default */
 .slider .list .item .image {
   flex-shrink: 0;
   width: var(--diameter);
@@ -329,7 +305,6 @@ header {
   .slider .list .item .content {
     grid-template-columns: 80%;
     justify-content: center;
-    /* gap: 20px; */
     top: 100px;
   }
   .slider .list .item .content h2 {
@@ -352,35 +327,3 @@ header {
     width: 90%;
   }
 }
-
-/* 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.nav-container{
-    position: absolute;
-    z-index: 2;
-}
-nav{
-    margin: 20px 20px;
-}
-
-
-
-header{
-    position: relative;
-    z-index: 1;
-    background-image: url("/img/pexels4.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-*/
