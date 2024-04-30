@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover a world of captivating images with our photo stock platform. Explore our vast collection and find the perfect photo for your project with our intuitive search functionality.">
     <meta name="author" content="Svitlana (Sylvia) Shasholko">
     <meta name="keywords" content="stock photos, images, photography, photo stock, photo library, royalty-free photos, high-quality photos, search functionality, visual assets">
@@ -22,10 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="style.css"
-    />
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
@@ -40,7 +34,6 @@
           <p>ViewVoyage</p>
           <p></p
         ></a>
-        <!-- <img src="img/viewvoyage-logo.png" alt=""> -->
       </figure>
       <nav>
         <svg
@@ -66,7 +59,7 @@
         <div class="item active">
           <div
             class="image"
-            style="--url: url('img/pexels1.jpg')"
+            style="--url: url('img/pexels1.webp')"
           ></div>
           <div class="content">
             <h2>Your Visual Journey Begins Here.</h2>
@@ -75,7 +68,7 @@
         <div class="item">
           <div
             class="image"
-            style="--url: url('img/pexels2.jpg')"
+            style="--url: url('img/pexels2.webp')"
           ></div>
           <div class="content">
             <h2>Your Inspiring Journey Begins Here.</h2>
@@ -84,7 +77,7 @@
         <div class="item">
           <div
             class="image"
-            style="--url: url('img/pexels3.jpg')"
+            style="--url: url('img/pexels3.webp')"
           ></div>
           <div class="content">
             <h2>Your Imaginative Journey Begins Here.</h2>
@@ -93,7 +86,7 @@
         <div class="item">
           <div
             class="image"
-            style="--url: url('img/pexels4.jpg')"
+            style="--url: url('img/pexels4.webp')"
           ></div>
           <div class="content">
             <h2>Your Creative Journey Begins Here.</h2>
@@ -102,7 +95,7 @@
         <div class="item">
           <div
             class="image"
-            style="--url: url('img/pexels5.jpg')"
+            style="--url: url('img/pexels5.webp')"
           ></div>
           <div class="content">
             <h2>Your Adventurous Journey Begins Here.</h2>
@@ -115,17 +108,19 @@
             type="text"
             name="search"
             class="search-input"
+            aria-label="Search Field"
           />
           <button
             type="submit"
             class="submit-btn"
+            aria-label="Search Button"
           >
             <i class="fas fa-search"></i>
           </button>
         </form>
       </div>
       <div class="arrows">
-        <button id="prev">
+        <button id="prev" aria-label="Previous background">
           <svg
             class="w-6 h-6 text-gray-800 dark:text-white"
             aria-hidden="true"
@@ -144,7 +139,7 @@
             />
           </svg>
         </button>
-        <button id="next">
+        <button id="next" aria-label="Next background">
           <svg
             class="w-6 h-6 text-gray-800 dark:text-white"
             aria-hidden="true"
@@ -167,7 +162,7 @@
     </section>
     <div class="gallery"></div>
     <div class="nav-button">
-      <button class="more">More</button>
+      <button class="more"  aria-label="More images">More</button>
     </div>
     <script src="app.js"></script>
   </body>

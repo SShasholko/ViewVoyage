@@ -93,7 +93,7 @@ function generatePictures(data) {
     galleryImg.innerHTML = `<div class = 'gallery-info'>
         <p>${photo.photographer}</p>
         <a href=${photo.src.original} target='_blank'>Download</a> </div>
-        <a href=${photo.src.original} target='_blank'><img src=${photo.src.large}/></a>`;
+        <a href=${photo.src.original} target='_blank'><img src=${photo.src.large} alt=${photo.alt}/></a>`;
     gallery.appendChild(galleryImg);
   });
 }
