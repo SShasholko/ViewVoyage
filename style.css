@@ -317,20 +317,29 @@ header {
   .slider .list .item .content h2 {
     font-size: 8em;
   }
+  .heared-content {
+    width: 60%;
+  }
+  .slider .list::after {
+    height: 55%;
+  }
 }
 
 @media all and (max-width: 767px) {
   .slider .list .item .content {
     grid-template-columns: 80%;
     justify-content: center;
-    gap: 20px;
-    top: 70px;
+    /* gap: 20px; */
+    top: 100px;
   }
   .slider .list .item .content h2 {
     font-size: 4em;
   }
   .slider .list .item .content p {
     font-size: small;
+  }
+  .slider .list::after {
+    height: 60%;
   }
 }
 
