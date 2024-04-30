@@ -18,6 +18,9 @@ let currentSearch;
 //Event listeners
 searchInput.addEventListener("input", apdateInput);
 more.addEventListener("click", morePhotos);
+window.addEventListener("resize", () => {
+  setDiameter();
+});
 
 nextBtn.onclick = () => {
   active = active + 1;
@@ -32,7 +35,6 @@ const setSlider = () => {
   let oldActive = document.querySelector(".slider .list .item.active");
   if (oldActive) oldActive.classList.remove("active");
   items[active].classList.add("active");
-  //
   nextBtn.classList.remove("d-none");
   prevBtn.classList.remove("d-none");
   if (active == lastPosition) nextBtn.classList.add("d-none");
@@ -91,7 +93,7 @@ function generatePictures(data) {
     galleryImg.innerHTML = `<div class = 'gallery-info'>
         <p>${photo.photographer}</p>
         <a href=${photo.src.original} target='_blank'>Download</a> </div>
-        <img src=${photo.src.large}/>`;
+        <a href=${photo.src.original} target='_blank'><img src=${photo.src.large}/></a>`;
     gallery.appendChild(galleryImg);
   });
 }
@@ -115,6 +117,3 @@ async function morePhotos() {
 setSlider();
 curatedPhotos();
 setDiameter();
-window.addEventListener("resize", () => {
-  setDiameter();
-});
