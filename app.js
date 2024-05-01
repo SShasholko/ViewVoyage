@@ -1,4 +1,7 @@
+// Authentication token for accessing the Pexels API
 const auth = "nWyUn0h0FmnDePqoeO86Iheim92k4G4nLW1zyGYuxA9KUHQKMiSlTX6y";
+
+// DOM elements
 const gallery = document.querySelector(".gallery");
 const searchInput = document.querySelector(".search-input");
 const form = document.querySelector(".search-form");
@@ -7,6 +10,7 @@ let items = document.querySelectorAll(".slider .list .item");
 let prevBtn = document.getElementById("prev");
 let nextBtn = document.getElementById("next");
 
+// Variables
 let lastPosition = items.length - 1;
 let firstPosition = 0;
 let active = 0;
@@ -22,7 +26,9 @@ window.addEventListener("resize", () => {
   setDiameter();
 });
 
-//Animation on first screen
+// Animation on first screen
+
+// Next and Previous button click handlers
 nextBtn.onclick = () => {
   active = active + 1;
   setSlider();
@@ -32,6 +38,8 @@ prevBtn.onclick = () => {
   setSlider();
 };
 
+
+/** Function to set active slider item */ 
 const setSlider = () => {
   let oldActive = document.querySelector(".slider .list .item.active");
   if (oldActive) oldActive.classList.remove("active");
@@ -42,6 +50,7 @@ const setSlider = () => {
   if (active == firstPosition) prevBtn.classList.add("d-none");
 };
 
+/** Function to calculate and set diameter of the slider */ 
 const setDiameter = () => {
   let slider = document.querySelector(".slider");
   let widthSlider = slider.offsetWidth;
@@ -52,17 +61,22 @@ const setDiameter = () => {
   document.documentElement.style.setProperty("--diameter", diameter + "px");
 };
 
-//Gallery
+
+// Gallery
+
+// Form submission event listener for searching photos
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   currentSearch = searchValue;
   searchPhotos(searchValue);
 });
 
+/** Function to update search value */ 
 function apdateInput(e) {
   searchValue = e.target.value;
 }
 
+/** Function to fetch data from API */
 async function fetchAPI(url) {
   const dataFetch = await fetch(url, {
     method: "GET",
@@ -75,12 +89,14 @@ async function fetchAPI(url) {
   return data;
 }
 
+/** Function to fetch curated photos */
 async function curatedPhotos() {
   fetchLink = `https://api.pexels.com/v1/curated?per_page=15&page=1`;
   const data = await fetchAPI(fetchLink);
   generatePictures(data);
 }
 
+/** Function to search for photos based on query */
 async function searchPhotos(query) {
   clear();
   fetchLink = `https://api.pexels.com/v1/search?query=${query}&per_page=15&page=1`;
@@ -94,6 +110,7 @@ async function searchPhotos(query) {
   }
 }
 
+/** Function to generate pictures in the gallery */
 function generatePictures(data) {
   data.photos.forEach((photo) => {
     const galleryImg = document.createElement("div");
@@ -106,11 +123,13 @@ function generatePictures(data) {
   });
 }
 
+/** Function to clear the gallery and search input */
 function clear() {
   gallery.innerHTML = "";
   searchInput.value = "";
 }
 
+/** Function to fetch more photos */
 async function morePhotos() {
   page++;
   if (currentSearch) {
@@ -122,6 +141,7 @@ async function morePhotos() {
   generatePictures(data);
 }
 
+// Initial setup
 setSlider();
 curatedPhotos();
 setDiameter();
