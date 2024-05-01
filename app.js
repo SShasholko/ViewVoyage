@@ -67,6 +67,10 @@ const setDiameter = () => {
 // Form submission event listener for searching photos
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  window.scroll({
+    top: window.scrollY + 300,
+    behavior: 'smooth'
+  });
   currentSearch = searchValue;
   searchPhotos(searchValue);
 });
