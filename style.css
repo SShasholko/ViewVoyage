@@ -237,7 +237,11 @@ header {
   border: none;
   color: #00c6bf;
   cursor: pointer;
-  padding: 12px 20px;
+  padding: 9px 13px;
+}
+
+.submit-btn svg{
+  color: #00c6bf;
 }
 
 .nav-button {

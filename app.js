@@ -121,7 +121,7 @@ function generatePictures(data) {
     galleryImg.classList.add("gallery-img");
     galleryImg.innerHTML = `<div class = 'gallery-info'>
         <p>${photo.photographer}</p>
-        <a href=${photo.src.original} target='_blank'>Download</a> </div>
+        <a href='' download=${photo.src.original}>Download</a></div>
         <a href=${photo.src.original} target='_blank'><img src=${photo.src.large} alt=${photo.alt}/></a>`;
     gallery.appendChild(galleryImg);
   });
