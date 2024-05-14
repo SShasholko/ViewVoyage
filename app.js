@@ -6,9 +6,12 @@ const gallery = document.querySelector(".gallery");
 const searchInput = document.querySelector(".search-input");
 const form = document.querySelector(".search-form");
 const more = document.querySelector(".more");
+const opePopup = document.getElementById("openPopup")
 let items = document.querySelectorAll(".slider .list .item");
 let prevBtn = document.getElementById("prev");
 let nextBtn = document.getElementById("next");
+let popup = document.getElementById("popup");
+let imageClick = document.querySelector(".image");
 
 // Variables
 let lastPosition = items.length - 1;
@@ -25,6 +28,8 @@ more.addEventListener("click", morePhotos);
 window.addEventListener("resize", () => {
   setDiameter();
 });
+opePopup.addEventListener("click", openPopup);
+imageClick.addEventListener("click", closePopupOutside);
 
 // Animation on first screen
 
@@ -143,6 +148,23 @@ async function morePhotos() {
   }
   const data = await fetchAPI(fetchLink);
   generatePictures(data);
+}
+
+/** Function to open the popup */
+function openPopup() {
+  popup.style.display = "block";
+}
+
+/** Function to close the popup */
+function closePopup() {
+  popup.style.display = "none";
+}
+
+/** Function to close the popup if clicked outside */
+function closePopupOutside(event) {
+  if (event.target !== popup &&  popup.style.display == "block") {
+      popup.style.display = "none";
+  }
 }
 
 // Initial setup
