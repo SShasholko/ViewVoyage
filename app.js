@@ -10,8 +10,9 @@ const opePopup = document.getElementById("openPopup")
 let items = document.querySelectorAll(".slider .list .item");
 let prevBtn = document.getElementById("prev");
 let nextBtn = document.getElementById("next");
-let popup = document.getElementById("popup");
-let imageClick = document.querySelector(".image");
+let popupContent = document.getElementById("popup");
+let modalBackdrop = document.querySelector(".modal-backdrop");
+// let imageClick = document.querySelector(".image");
 
 // Variables
 let lastPosition = items.length - 1;
@@ -29,7 +30,7 @@ window.addEventListener("resize", () => {
   setDiameter();
 });
 opePopup.addEventListener("click", openPopup);
-imageClick.addEventListener("click", closePopupOutside);
+modalBackdrop.addEventListener("click", closePopupOutside);
 
 // Animation on first screen
 
@@ -152,18 +153,22 @@ async function morePhotos() {
 
 /** Function to open the popup */
 function openPopup() {
+  modalBackdrop.style.display = "block";
   popup.style.display = "block";
 }
 
 /** Function to close the popup */
 function closePopup() {
+  modalBackdrop.style.display = "none";
   popup.style.display = "none";
 }
 
 /** Function to close the popup if clicked outside */
 function closePopupOutside(event) {
+  console.log(event.target)
   if (event.target !== popup &&  popup.style.display == "block") {
       popup.style.display = "none";
+      modalBackdrop.style.display = "none";
   }
 }
 

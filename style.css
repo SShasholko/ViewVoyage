@@ -299,19 +299,35 @@ header {
 #openPopup{
   cursor: pointer;
 }
-.popup {
+
+.modal-backdrop {
   display: none; /* Hidden by default */
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+} 
+
+.popup {
+
+  display: none; /* Hidden by default */
+  position: fixed;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid #ccc;
   background-color: #fff;
-  z-index: 2;
+  z-index: 5;
   border-radius: 10px;
 }
 
 .popup-content {
+
   padding: 30px;
   max-width: auto;
   display: flex;
