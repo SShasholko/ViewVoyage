@@ -6,13 +6,15 @@ const gallery = document.querySelector(".gallery");
 const searchInput = document.querySelector(".search-input");
 const form = document.querySelector(".search-form");
 const more = document.querySelector(".more");
-const opePopup = document.getElementById("openPopup")
+const opePopup = document.getElementById("openPopup");
 let items = document.querySelectorAll(".slider .list .item");
 let prevBtn = document.getElementById("prev");
 let nextBtn = document.getElementById("next");
 let popupContent = document.getElementById("popup");
 let modalBackdrop = document.querySelector(".modal-backdrop");
-// let imageClick = document.querySelector(".image");
+let modalNameInput = document.querySelector("#formName");
+let modalEmailInput = document.querySelector("#formEmail");
+let modalMessageInput = document.querySelector("#formMessage");
 
 // Variables
 let lastPosition = items.length - 1;
@@ -44,8 +46,7 @@ prevBtn.onclick = () => {
   setSlider();
 };
 
-
-/** Function to set active slider item */ 
+/** Function to set active slider item */
 const setSlider = () => {
   let oldActive = document.querySelector(".slider .list .item.active");
   if (oldActive) oldActive.classList.remove("active");
@@ -56,7 +57,7 @@ const setSlider = () => {
   if (active == firstPosition) prevBtn.classList.add("d-none");
 };
 
-/** Function to calculate and set diameter of the slider */ 
+/** Function to calculate and set diameter of the slider */
 const setDiameter = () => {
   let slider = document.querySelector(".slider");
   let widthSlider = slider.offsetWidth;
@@ -67,21 +68,22 @@ const setDiameter = () => {
   document.documentElement.style.setProperty("--diameter", diameter + "px");
 };
 
-
 // Gallery
 
 // Form submission event listener for searching photos
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  window.scroll({
-    top: window.scrollY + 300,
-    behavior: 'smooth'
-  });
   currentSearch = searchValue;
-  searchPhotos(searchValue);
+  if (currentSearch) {
+    searchPhotos(searchValue);
+    window.scroll({
+      top: window.scrollY + 300,
+      behavior: "smooth",
+    });
+  }
 });
 
-/** Function to update search value */ 
+/** Function to update search value */
 function apdateInput(e) {
   searchValue = e.target.value;
 }
@@ -111,11 +113,11 @@ async function searchPhotos(query) {
   clear();
   fetchLink = `https://api.pexels.com/v1/search?query=${query}&per_page=15&page=1`;
   const data = await fetchAPI(fetchLink);
-  if(data.total_results){
-    generatePictures(data);}
-  else{
+  if (query != undefined && data.total_results) {
+    generatePictures(data);
+  } else {
     const galleryImg = document.createElement("div");
-    galleryImg.innerHTML = `<p>Nothing was found for your request</p>`
+    galleryImg.innerHTML = `<p>Nothing was found for your request</p>`;
     gallery.appendChild(galleryImg);
   }
 }
@@ -154,21 +156,30 @@ async function morePhotos() {
 /** Function to open the popup */
 function openPopup() {
   modalBackdrop.style.display = "block";
-  popup.style.display = "block";
+  popupContent.style.display = "block";
+  document.body.style.position = "fixed";
+  document.body.style.width = "100vw";
+  modalNameInput.value = "";
+  modalEmailInput.value = "";
+  modalMessageInput.value = "";
 }
 
 /** Function to close the popup */
 function closePopup() {
   modalBackdrop.style.display = "none";
-  popup.style.display = "none";
+  popupContent.style.display = "none";
+  document.body.style.position = "";
+  document.body.style.width = "";
 }
 
 /** Function to close the popup if clicked outside */
 function closePopupOutside(event) {
-  console.log(event.target)
-  if (event.target !== popup &&  popup.style.display == "block") {
-      popup.style.display = "none";
-      modalBackdrop.style.display = "none";
+  console.log(event.target);
+  if (event.target !== popupContent && popupContent.style.display == "block") {
+    popupContent.style.display = "none";
+    modalBackdrop.style.display = "none";
+    document.body.style.position = "";
+    document.body.style.width = "";
   }
 }
 
