@@ -41,4 +41,12 @@ Visit the site here: [ViewVoyage](https://sshasholko.github.io/ViewVoyage/)
 ### Images
 - **The images** used within this project were sourced from Pexels ([Pexels](https://www.pexels.com/)). Pexels offers a vast library of high-quality images under a permissive license.
 
+## Wireframes
+Wireframes for the website were created using [Milanote](https://milanote.com/). The wireframes encompass the first screen, gallery, and feedback modal window, designed for both desktop and mobile versions of this photo stock project.
+
+[Look at site's Skatch online ](https://app.milanote.com/1SbBnD1MVSoi79?p=UtPKmOtEZ3i)
+
+The wireframes include sketches for various key pages: Homepage, Paintings, Contact Page. 
+![Sketch](https://viewvoyage.s3.eu-north-1.amazonaws.com/canvas-vv.png)
+
 
