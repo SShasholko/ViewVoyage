@@ -58,7 +58,7 @@ The photo stock project ViewVoyage offers a streamlined user experience with sim
 - **Search Input** Located at the center of the first screen, a straightforward input element is prominently displayed, accompanied by a search icon. This minimalist design ensures ease of use and intuitive navigation for users seeking specific images within the photo stock.
 ![Search Input](https://viewvoyage.s3.eu-north-1.amazonaws.com/search-vv.png)
 - **Animation and Background Photo Transition** One of the standout features of the first screen is its captivating animation, inspired by the tutorial provided by [LunDev](https://www.youtube.com/watch?v=qome_iWFKSk&t=124s&ab_channel=LunDev). This animation adds a layer of dynamism and interactivity, enhancing the overall aesthetic appeal of the interface. Users can seamlessly transition between background photos by clicking buttons positioned on the left and right sides of the screen. This fluid movement not only enriches the visual experience but also keeps users engaged.
-![Animation](https://viewvoyage.s3.eu-north-1.amazonaws.com/animation-fs.gif)
+<img src="/img/animation-fs.gif">
 - **Desktop and Mobile Optimization** The animation and overall design are optimized for both desktop and mobile versions, ensuring a consistent experience across all devices.
-![Animation Mobile](https://viewvoyage.s3.eu-north-1.amazonaws.com/animation-fs-mobile.gif)
+<img src="/img/animation-fs-mobile.gif">
 
