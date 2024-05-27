@@ -4,4 +4,4 @@ ViewVoyage is your go-to platform for discovering and downloading high-quality p
 
 Visit the site here: [ViewVoyage](https://sshasholko.github.io/ViewVoyage/)
 
-![Mockup](https://viewvoyage.s3.eu-north-1.amazonaws.com/mockup_viewVoyage.png)
+![Mockup](https://viewvoyage.s3.eu-north-1.amazonaws.com/mockup-vv.png)
