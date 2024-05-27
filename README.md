@@ -46,7 +46,19 @@ Wireframes for the website were created using [Milanote](https://milanote.com/).
 
 [Look at site's Skatch online ](https://app.milanote.com/1SbBnD1MVSoi79?p=UtPKmOtEZ3i)
 
-The wireframes include sketches for various key pages: Homepage, Paintings, Contact Page. 
 ![Sketch](https://viewvoyage.s3.eu-north-1.amazonaws.com/canvas_viewvoyage.png)
 
+## Features
+The photo stock project ViewVoyage offers a streamlined user experience with simple yet effective features. Upon landing on the platform's first screen, users encounter a convenient search input, enabling quick access to desired images. The gallery seamlessly displays images sourced from Pexels.com via API integration, providing users with a diverse selection of high-quality visuals. Additionally, users can easily provide feedback through a user-friendly form accessible within a popup window. Below are some key features included in the website:
+
+### First Screen
+- **Logo** Positioned at the top left corner, a simple yet distinctive logo serves as a visual marker on the interface, adding a touch of identity to the design.
+- **Feedback Modal Button** Positioned at the top right corner, a button prompts users to engage with the feedback system, conveniently accessible within a modal window.
+![Logo+Feedback Modal Button](https://viewvoyage.s3.eu-north-1.amazonaws.com/logo-vv.png)
+- **Search Input** Located at the center of the first screen, a straightforward input element is prominently displayed, accompanied by a search icon. This minimalist design ensures ease of use and intuitive navigation for users seeking specific images within the photo stock.
+![Search Input](https://viewvoyage.s3.eu-north-1.amazonaws.com/search-vv.png)
+- **Animation and Background Photo Transition** One of the standout features of the first screen is its captivating animation, inspired by the tutorial provided by [LunDev](https://www.youtube.com/watch?v=qome_iWFKSk&t=124s&ab_channel=LunDev). This animation adds a layer of dynamism and interactivity, enhancing the overall aesthetic appeal of the interface. Users can seamlessly transition between background photos by clicking buttons positioned on the left and right sides of the screen. This fluid movement not only enriches the visual experience but also keeps users engaged.
+![Animation](https://viewvoyage.s3.eu-north-1.amazonaws.com/animation-fs.gif)
+- **Desktop and Mobile Optimization** The animation and overall design are optimized for both desktop and mobile versions, ensuring a consistent experience across all devices.
+![Animation Mobile](https://viewvoyage.s3.eu-north-1.amazonaws.com/animation-fs-mobile.gif)
 
