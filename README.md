@@ -47,6 +47,6 @@ Wireframes for the website were created using [Milanote](https://milanote.com/).
 [Look at site's Skatch online ](https://app.milanote.com/1SbBnD1MVSoi79?p=UtPKmOtEZ3i)
 
 The wireframes include sketches for various key pages: Homepage, Paintings, Contact Page. 
-![Sketch](https://viewvoyage.s3.eu-north-1.amazonaws.com/canvas-vv.png)
+![Sketch](https://viewvoyage.s3.eu-north-1.amazonaws.com/canvas_viewvoyage.png)
 
 
