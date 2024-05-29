@@ -69,8 +69,9 @@ The photo stock project ViewVoyage offers a streamlined user experience with sim
     ![Gallery](https://viewvoyage.s3.eu-north-1.amazonaws.com/gallery-vv.png)
     - Photos are sourced from Pexels.com using the [Pexels API](https://www.pexels.com/api/documentation/?#photos-search).
 - **Photo Details**:
+
     ![Photo](https://viewvoyage.s3.eu-north-1.amazonaws.com/photo-vv.png)
-    
+  
     - Each photo is accompanied by the author's name.
     - A "Download Photo" button is available next to each photo, allowing users to download the image.
     - Clicking on a photo opens it in a new tab in full size.
@@ -99,3 +100,20 @@ The photo stock project ViewVoyage offers a streamlined user experience with sim
 - **Submission and Confirmation**:
     - Once the user submits the form, a confirmation window appears, informing them that their message has been sent successfully.
     ![Submission](https://viewvoyage.s3.eu-north-1.amazonaws.com/form-subm.png)
+
+
+## Technologies Used
+The website was built using a variety of technologies and tools to ensure a seamless user experience and robust functionality:
+- **HTML**: Used for structuring the content and layout of the web pages.
+- **CSS**: Employed for styling and enhancing the visual appearance of the website.
+- **JavaScript**: Employed for adding interactivity and dynamic functionality to the user interface, ensuring a smooth and responsive user experience.
+- [Visual Studio Code](https://code.visualstudio.com/): Used as the primary code editor for development, offering a robust and versatile environment with extensive features and extensions.
+- [Milanote](https://milanote.com/): Utilized for visual planning and wireframing.
+- [Google Fonts](https://fonts.google.com/): Integrated for access to a diverse selection of web fonts to enhance typography.
+- [Flowbite Icons](https://flowbite.com/icons/): Utilized for incorporating high-quality, customizable icons throughout the project to enhance visual appeal and user experience.
+- [GitHub](https://github.com/): Used for version control and hosted the website.
+- **Chrome DevTools**: Employed for debugging, testing, and optimizing the website's performance during development.
+- [AWS (Amazon Web Services)](https://aws.amazon.com/): Storing images for Readme file
+- [JSHint](https://jshint.com/): Utilized for static code analysis to detect errors and potential problems in JavaScript code, ensuring code quality and consistency.
+- [W3C Markup Validator](https://validator.w3.org/): Utilized to validate the HTML code and ensure compliance with web standards.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/): Used to validate the CSS code and ensure adherence to best practices and standards.
