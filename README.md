@@ -69,8 +69,9 @@ The photo stock project ViewVoyage offers a streamlined user experience with sim
     ![Gallery](https://viewvoyage.s3.eu-north-1.amazonaws.com/gallery-vv.png)
     - Photos are sourced from Pexels.com using the [Pexels API](https://www.pexels.com/api/documentation/?#photos-search).
 - **Photo Details**:
-    - Each photo is accompanied by the author's name.
     ![Photo](https://viewvoyage.s3.eu-north-1.amazonaws.com/photo-vv.png)
+    
+    - Each photo is accompanied by the author's name.
     - A "Download Photo" button is available next to each photo, allowing users to download the image.
     - Clicking on a photo opens it in a new tab in full size.
     ![Photo Full Size](https://viewvoyage.s3.eu-north-1.amazonaws.com/photo-fs.png)
@@ -84,3 +85,17 @@ The photo stock project ViewVoyage offers a streamlined user experience with sim
     - A "More" button is located at the bottom of the page.
     - Pressing this button loads additional images based on the user's search term.
     ![More Button](https://viewvoyage.s3.eu-north-1.amazonaws.com/more-bt.png)
+
+### Feedback Form in Popup Window
+![Feedback Form in Popup Window](https://viewvoyage.s3.eu-north-1.amazonaws.com/form-vv.png)
+- **Opening and Closing**
+    - The feedback form is accessible via a button on the first screen.
+    - Users can close the form by clicking the "Close" button or by clicking on the area around the form.
+- **Form Details**:
+    - The form is connected to Formspree.io, which sends an email notification upon message submission.
+    ![Feedback Form in Popup Window](https://viewvoyage.s3.eu-north-1.amazonaws.com/Subm-form.png)
+    - All input fields are mandatory and must be filled out to send the form.
+    ![Fields are mandatory](https://viewvoyage.s3.eu-north-1.amazonaws.com/mandatori-filds.png)
+- **Submission and Confirmation**:
+    - Once the user submits the form, a confirmation window appears, informing them that their message has been sent successfully.
+    ![Submission](https://viewvoyage.s3.eu-north-1.amazonaws.com/form-subm.png)
