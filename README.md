@@ -59,6 +59,28 @@ The photo stock project ViewVoyage offers a streamlined user experience with sim
 ![Search Input](https://viewvoyage.s3.eu-north-1.amazonaws.com/search-vv.png)
 - **Animation and Background Photo Transition** One of the standout features of the first screen is its captivating animation, inspired by the tutorial provided by [LunDev](https://www.youtube.com/watch?v=qome_iWFKSk&t=124s&ab_channel=LunDev). This animation adds a layer of dynamism and interactivity, enhancing the overall aesthetic appeal of the interface. Users can seamlessly transition between background photos by clicking buttons positioned on the left and right sides of the screen. This fluid movement not only enriches the visual experience but also keeps users engaged.
 <img src="/img/animation-fs.gif">
-- **Desktop and Mobile Optimization** The animation and overall design are optimized for both desktop and mobile versions, ensuring a consistent experience across all devices.
-<img src="/img/animation-fs-mobile.gif">
 
+- **Desktop and Mobile Optimization** The animation and overall design are optimized for both desktop and mobile versions, ensuring a consistent experience across all devices.
+<img src="/img/animation-fs-mobile.gif" center>
+
+### Gallery
+- **Initial Display**:
+    - Displays 15 random photos upon page load.
+    ![Gallery](https://viewvoyage.s3.eu-north-1.amazonaws.com/gallery-vv.png)
+    - Photos are sourced from Pexels.com using the [Pexels API](https://www.pexels.com/api/documentation/?#photos-search).
+- **Photo Details**:
+    - Each photo is accompanied by the author's name.
+    ![Photo](https://viewvoyage.s3.eu-north-1.amazonaws.com/photo-vv.png)
+    - A "Download Photo" button is available next to each photo, allowing users to download the image.
+    - Clicking on a photo opens it in a new tab in full size.
+    ![Photo Full Size](https://viewvoyage.s3.eu-north-1.amazonaws.com/photo-fs.png)
+- **Search Functionality**:
+    - **Empty Input**: No action is taken if the search button is pressed with an empty input field.
+    - **Invalid Input**: A message is displayed indicating no pictures match the request if the input is incorrect, contains mistakes, or is random.
+    ![Invalid Input](https://viewvoyage.s3.eu-north-1.amazonaws.com/no-photo.png)
+    - **Valid Input**: The gallery updates to show photos relevant to the user's search term.
+    ![Valid Input](https://viewvoyage.s3.eu-north-1.amazonaws.com/valid-input.png)
+- **Load More Images**:
+    - A "More" button is located at the bottom of the page.
+    - Pressing this button loads additional images based on the user's search term.
+    ![More Button](https://viewvoyage.s3.eu-north-1.amazonaws.com/more-bt.png)
