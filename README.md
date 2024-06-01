@@ -117,3 +117,70 @@ The website was built using a variety of technologies and tools to ensure a seam
 - [JSHint](https://jshint.com/): Utilized for static code analysis to detect errors and potential problems in JavaScript code, ensuring code quality and consistency.
 - [W3C Markup Validator](https://validator.w3.org/): Utilized to validate the HTML code and ensure compliance with web standards.
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/): Used to validate the CSS code and ensure adherence to best practices and standards.
+
+## Testing
+### Browser Compatibility
+- Expected:
+  - The website should display correctly and function seamlessly on popular browsers including Google Chrome, Mozilla Firefox, Safari, Microsoft Edge, and Opera.
+- Testing:
+  - Visited the website using each browser.
+  - Checked for any layout inconsistencies, rendering issues, or functional discrepancies.
+- Results:
+  - The website displayed correctly on all tested browsers.
+  - No significant layout or functionality issues were observed.
+- Fix:
+  - No fixes required.
+
+### Responsive Design
+- Expected:
+  - The website should be responsive and adapt well to various devices such as desktops, laptops, tablets, and smartphones.
+- Testing:
+  - Accessed the website on different devices with varying screen sizes and resolutions.
+  - Verified the layout, content, and functionality at different viewport sizes.
+- Results:
+  - The website responded effectively to different screen sizes, maintaining readability and usability across devices.
+  - All elements were appropriately scaled and positioned, ensuring a consistent user experience.
+- Fix:
+  - No fixes required.
+
+### Performance Testing
+- Expected:
+  - Assess the website's loading speed and overall performance to ensure an optimal user experience.
+- Testing:
+  - Conducted performance tests using Google PageSpeed Insights to analyze key metrics and identify areas for improvement.
+- Results:
+  - The Google PageSpeed Insights test provided valuable insights into the website's performance, highlighting strengths and areas for potential optimization.
+  - The test results indicated strong performance in several key areas but also identified opportunities for enhancing load times and overall efficiency.
+- Fix:
+  - Despite the areas identified for improvement, specific optimizations were not implemented due to constraints. 
+![Google PageSpeed Insights](https://viewvoyage.s3.eu-north-1.amazonaws.com/pagespeed.png)
+
+### Pingdom Website Speed Test
+- Expected:
+  - Assess the website's loading speed to ensure a fast and efficient user experience.
+- Testing:
+  - Conducted a speed test using the Pingdom Website Speed Test tool.
+- Results:
+  - The Pingdom Website Speed Test showed a score of 91%, indicating excellent performance and fast load times. This result is very satisfying and reflects the effectiveness of the current optimizations.
+- Fix:
+  - Although the performance is already strong, there are potential areas for future improvements.
+
+### Code Validation
+- Expected:
+  - Ensure that the code adheres to industry standards and best practices for HTML, CSS, and JavaScript to maintain a high level of quality and compatibility across different browsers and devices.
+- Testing:
+  - Used the W3C Markup Validation Service to validate HTML.
+  - Employed the W3C CSS Validation Service to check the CSS for errors and adherence to standards.
+  - Utilized JSHint to analyze JavaScript code for potential issues and to enforce coding conventions.
+- Results:
+  - The HTML validation identified a few syntax errors and deprecated tags.
+  - The CSS validation uncovered some improper property values and vendor-specific prefixes without standard equivalents.
+  - JSHint reported several issues, including missing semicolons, undeclared variables, and potential logical errors.
+- Fix:
+  - Corrected HTML syntax errors and replaced deprecated tags with their modern equivalents.
+  ![HTML Validation](https://viewvoyage.s3.eu-north-1.amazonaws.com/html-val.png)
+  - Fixed CSS property values and ensured all vendor-specific prefixes had corresponding standard properties.
+  ![CSS Validation](https://viewvoyage.s3.eu-north-1.amazonaws.com/css-val.png)
+  - Addressed JavaScript issues by adding missing semicolons, declaring variables properly, and resolving logical errors as reported by JSHint.
+  ![JS Validation](https://viewvoyage.s3.eu-north-1.amazonaws.com/js-val.png)
+
