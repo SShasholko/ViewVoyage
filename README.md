@@ -164,6 +164,7 @@ The website was built using a variety of technologies and tools to ensure a seam
   - The Pingdom Website Speed Test showed a score of 91%, indicating excellent performance and fast load times. This result is very satisfying and reflects the effectiveness of the current optimizations.
 - Fix:
   - Although the performance is already strong, there are potential areas for future improvements.
+![Speed Test](https://viewvoyage.s3.eu-north-1.amazonaws.com/speedtest.png)
 
 ### Code Validation
 - Expected:
