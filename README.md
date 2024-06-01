@@ -185,3 +185,25 @@ The website was built using a variety of technologies and tools to ensure a seam
   - Addressed JavaScript issues by adding missing semicolons, declaring variables properly, and resolving logical errors as reported by JSHint.
   ![JS Validation](https://viewvoyage.s3.eu-north-1.amazonaws.com/js-val.png)
 
+## Credits
+### API Providers:
+- [Pexels](https://www.pexels.com/) - Provider of free high-quality stock photos used in this project.
+### Third-Party Libraries:
+- [Flowbite Icons](https://www.flowbite.com/) - Used for incorporating high-quality icons throughout the project.
+- [Milanote](https://www.milanote.com/) - Utilized for creating wireframes for the project.
+### Tutorials and References:
+- [LunDev YouTube Channel](https://www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A) - Inspiration for the animation used in the project's first screen.
+### Tools and Platforms:
+- [Visual Studio Code](https://code.visualstudio.com/) - Primary code editor used for development.
+- [GitHub](https://github.com/) - Hosting platform for version control and project management.
+
+## Acknowledgements
+- **Yarik:** Thank you to my son Yarik for his unwavering support and encouragement throughout this journey.
+- **Marcel:** Special thanks to my mentor Marcel for his invaluable advice and expertise.
+- **My Friends:** Heartfelt appreciation to my friends for dedicating their time to test the website and providing constructive feedback, helping to refine and improve the user experience.
+- **Coding Community:** I extend my sincere appreciation to the entire coding community for generously sharing their knowledge, experience, and resources on the Internet. Your contributions have been instrumental in my learning and development process.
+
+I am deeply grateful to everyone who has played a part in making this project possible.
+
+## Development Team
+Svitlana Shasholko: Lead Developer 😊😉
