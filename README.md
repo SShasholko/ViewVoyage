@@ -6,6 +6,35 @@ Visit the site here: [ViewVoyage](https://sshasholko.github.io/ViewVoyage/)
 
 ![Mockup](https://viewvoyage.s3.eu-north-1.amazonaws.com/mockup-vv.png)
 
+## Table of Contents
+   * [Project Goals](#project-goals)
+      + [Goals for Users](#goals-for-users)
+      + [Goals for Developer](#goals-for-developer)
+   * [Design Choices](#design-choices)
+      + [Fonts](#fonts)
+      + [Icons](#icons)
+      + [Color Scheme](#color-scheme)
+      + [Images](#images)
+   * [Wireframes](#wireframes)
+   * [Features](#features)
+      + [First Screen](#first-screen)
+      + [Gallery](#gallery)
+      + [Feedback Form in Popup Window](#feedback-form-in-popup-window)
+   * [Technologies Used](#technologies-used)
+   * [Testing](#testing)
+      + [Browser Compatibility](#browser-compatibility)
+      + [Responsive Design](#responsive-design)
+      + [Performance Testing](#performance-testing)
+      + [Pingdom Website Speed Test](#pingdom-website-speed-test)
+      + [Code Validation](#code-validation)
+   * [Credits](#credits)
+      + [API Providers:](#api-providers)
+      + [Third-Party Libraries:](#third-party-libraries)
+      + [Tutorials and References:](#tutorials-and-references)
+      + [Tools and Platforms:](#tools-and-platforms)
+   * [Acknowledgements](#acknowledgements)
+   * [Development Team](#development-team)
+
 
 ## Project Goals
 
@@ -198,7 +227,7 @@ The website was built using a variety of technologies and tools to ensure a seam
 - [GitHub](https://github.com/) - Hosting platform for version control and project management.
 
 ## Acknowledgements
-- **Yarik:** Thank you to my son Yarik for his unwavering support and encouragement throughout this journey.
+- **Yarik:** Thank you to my son Yarik for his unwavering support and encouragement throughout this journey. Love you!
 - **Marcel:** Special thanks to my mentor Marcel for his invaluable advice and expertise.
 - **My Friends:** Heartfelt appreciation to my friends for dedicating their time to test the website and providing constructive feedback, helping to refine and improve the user experience.
 - **Coding Community:** I extend my sincere appreciation to the entire coding community for generously sharing their knowledge, experience, and resources on the Internet. Your contributions have been instrumental in my learning and development process.
